@@ -48,41 +48,13 @@
 
 \section{Introduction}
 
-Statistical Machine Translation (SMT) and Neural Machine Translation (NMT) have been the cutting edge solutions in the field of Machine Translation. The NLP community has shown keen interest in SMT due to its ability to perform more accurate translations with less parallel corpora. Phrase based SMT systems have been the best in terms of performance as they use a phrase based model to overcome the disadvantages of a word based model. These models work by translating sequences of words of varying length rather than  translating word by word. A phrase based SMT system usually consists of three models viz. the language model, the translation model and the distortion model. Mathematically, these models are represented as: \\
-
-\begin{center}
-$ e_{best} = argmax_{e} P(e|f) = argmax_{e} [P(f|e).P_{LM}(e)] $ \\
-\end{center}
-
-Here, $f$ and $e$ mean input in foreign language and output in english respectively. $e_{best}$ is the translation $e$ with the highest probability, given the foreign piece of text $f$. $P_{LM}(e)$ is the language model, it assigns a probability of correctness in the particular language to $e$. $P(f|e)$ is the translation model which is expressed as: \\
-
-\begin{center}
-$ P(f^{I}|e^{I}) = \displaystyle\prod_{i=1}^{I} \phi(f^{i}|e^{i})d(start_{i} - end_{i-1} - 1) $ \\
-\end{center}
-
-where, $\phi(f^{i}|e^{i})$ is the phrase translation probability, it is the probability of $f^{i}$ being translated to $e^{i}$, it is learned from the parallel corpus. $d(start_{i} - end_{i-1} - 1)$ is the distortion probability. It is the distance between words in source and translated text, settled with an exponential cost.
-
-Decoding is a generate and score process in which the best translation is searched in the space of all the possible translations. The decoding problem for statistical machine translation is NP-complete. Thus, heuristic search methods are used to find the best translation. Traditional decoding methods make use of the Beam Search algorithm to search for the ideal translation in a huge number of hypotheses. Naturally the poor hypotheses need to be pruned out. The standard implementations of decoding use threshold pruning and histogram pruning algorithms to achieve this. Threshold pruning removes the hypotheses from the stack that have a score lower than a fixed threshold value (beam threshold), in histogram pruning, only a fixed number of hypotheses are kept in the stack (stack size). 
-
-Beam threshold and Stack size play an important role in translation accuracy and decoding time. In most of the standard implementations, the values of these parameters are already fixed, there has been a study where the parameters are dynamically selected according to the source and target languages using a Machine Learning based approach. The decoding time and translation accuracy have shown considerable improvement when the parameters are dynamically predicted and set by the machine learning model. The machine learning based approach outperforms a NMT system and a SMT system with fixed values for stack size and beam threshold. Our work aims to test this machine learing based approach with more experimental rigour and find reasons for this improvement.
+\lipsum[1]
 
 \subsection{Previous Work}
-
-Many improvements has been made to (Moses) the open source toolkit for statistical machine translation, its output quality and speed has been improved when compared to the previous stack based decoding approach using new decoders [] [] and also many improvements were made in language models which are very fast and efficient [] []. The addition of phrase table which can be loaded whenever required by the SMT decoder [] has shown a great reduction in memory requirement and initial loading time, which was later further improved by compressing the on-disk phrase table and lexicalized re-ordering model [].
-
-Great pruning approaches like cube-pruning and cube-growing algorithm in [] gives us a single parameter which allows us to control the tradeoff between translation accuracy and speed.The Moses decoder was introduced by Koehn et al. [], where the traditional SMT uses beam search for finding the best translation from the subset of hypothesis (possible translations) stored in a stack. As different inputs will require different parameters which were somehow related to the input sentences. In SMT the same decoder parameters were applied, no matter what the source text and is not possible for the  user to decide the set of parameter's values according different input texts, there was no feature for this task. It is known that there is a tradeoff between translation accuracy and decoding time in machine translation. There were efforts made to reduce the decoding time or increase the translation accuracy but all approaches were for the training model (MERT) which would tune its parameters [] or in improving the decoding algorithm []. Until in D. Banik et al. [] where they proposed a machine learning based parameter selection technique to achieve better decoding, where they have shown that parameter's values are a very crucial factor for decoding time and translation accuracy. They trained a classifier where it will take the source text as the input and classify them into two parameter classes i.e stack size and beam threshold based on the input text, here bigger stack size means better translation accuracy but poor decoding time and a bigger beam threshold will give fast results but in the cost of less good translations, so the classifier will help to select the best parameter class for a given input text.
-
-The features they took for the classification task were directly related to the complexity and structure of the input text, which are percentage of comma (,) in the text, percentage of long sentences in the text, average words per line in the text, percentage of stop words. They have used the CN2 unordered algorithm [], [] as the classifier model, whose central concepts are based on Algorithm quasi-optimal learning (AQ algorithm) [] and the Iterative Dichotomiser 3 (ID3) algorithm. It was seen that the classification task could be made better with properly handling the low data constraint and with better feature selection, feature engineering and using a different algorithm approach for the model, all of which we propose in this paper.
-
+\lipsum[1]
 
 \subsection{Our Approach}
-This space is to explain our approach
-
-- motivation - How the classification task can be made better with testing out different models with better features and hyperparameter tuning
-- methods - Our feature selection and engineering techniques
-- tools
-- results in short
-
+\lipsum[1]
 
 \subsubsection{Headings: third level}
 \lipsum[6]
