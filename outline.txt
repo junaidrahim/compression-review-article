@@ -1,0 +1,31 @@
+
+						LOSSLESS DATA COMPRESSION ALGORITHMS
+
+
+
+
+
+abstract-how shannons book strated a new era in IT.something about huffman.with the dawn of internet how compression was taken seriously in cs.lz family of algo.arithmetic algo.delfate and winrar(consists of everything including zip).
+
+intro-what are compression algo.why do we need them.why werent the popular before internet(not worth it as it was time consuming) but are popular now(transferring small files over internet much easier).what are the fiels where compression is used(almost everything).diff mehtods.explain entropy.
+
+shannon coding-a brief intro about his book.the explaining the code.how it is not the perfect technique for entropy coding(one bit diff)
+
+huffman code-perfect for entropy coding.explain the shit.
+
+lz family-explain the first 2 code(lz77 and lz78)in detail.give something about other algo.write about the legal issues.future work that can be done in lz algo.
+
+run length coding and prediction by partial mathcing-ekdum thoda sa.
+
+arithmetic coding-why it is one of the best.explain how that shit works.
+
+deflate and (winrar lossy data compression,dekh lena karna hai ki  nahi)-combination of aritmetic coding and huffman(deflate)
+
+future-how deflate is not perfect(huffman strings grow very sparse with increse in the number of diff  charcter),lz algo have been developing ever since they were introduced,Kolmogorov complexity(how to compress RANDOM strings,if that is achived!!!!)
+
+
+conclusion-soch lenge.
+
+referemces-mera matha
+
+

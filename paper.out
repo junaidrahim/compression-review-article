@@ -1,8 +1,12 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Previous Work}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Our Approach}{section.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Headings: third level}{subsection.1.2}% 4
-\BOOKMARK [1][-]{section.2}{Examples of citations, figures, tables, references}{}% 5
-\BOOKMARK [2][-]{subsection.2.1}{Figures}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.2}{Tables}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.3}{Lists}{section.2}% 8
+\BOOKMARK [1][-]{section.2}{Shanon Coding}{}% 2
+\BOOKMARK [1][-]{section.3}{Huffman Coding}{}% 3
+\BOOKMARK [1][-]{section.4}{Lempel-Ziv\(lz\) Compression Methods}{}% 4
+\BOOKMARK [1][-]{section.5}{Run Length Coding}{}% 5
+\BOOKMARK [1][-]{section.6}{Prediction by Partial Matching}{}% 6
+\BOOKMARK [1][-]{section.7}{Arithmetic Coding}{}% 7
+\BOOKMARK [1][-]{section.8}{Deflate}{}% 8
+\BOOKMARK [1][-]{section.9}{Grammar Based Compression}{}% 9
+\BOOKMARK [1][-]{section.10}{Current Research Work}{}% 10
+\BOOKMARK [1][-]{section.11}{Future Scope}{}% 11
+\BOOKMARK [1][-]{section.12}{Conclusion}{}% 12
