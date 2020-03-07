@@ -1,13 +1,14 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Prefix Codes}{}% 2
-\BOOKMARK [1][-]{section.3}{Shanon Coding}{}% 3
-\BOOKMARK [1][-]{section.4}{Huffman Coding}{}% 4
-\BOOKMARK [1][-]{section.5}{Lempel-Ziv\(lz\) Compression Methods}{}% 5
-\BOOKMARK [1][-]{section.6}{Run Length Coding}{}% 6
-\BOOKMARK [1][-]{section.7}{Prediction by Partial Matching}{}% 7
-\BOOKMARK [1][-]{section.8}{Arithmetic Coding}{}% 8
-\BOOKMARK [1][-]{section.9}{Deflate}{}% 9
-\BOOKMARK [1][-]{section.10}{Grammar Based Compression}{}% 10
-\BOOKMARK [1][-]{section.11}{Current Research Work}{}% 11
-\BOOKMARK [1][-]{section.12}{Future Scope}{}% 12
-\BOOKMARK [1][-]{section.13}{Conclusion}{}% 13
+\BOOKMARK [2][-]{subsection.1.1}{Overview of Lossless Data Compression Techniques}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Prefix Codes}{}% 3
+\BOOKMARK [1][-]{section.3}{Shanon Coding}{}% 4
+\BOOKMARK [1][-]{section.4}{Huffman Coding}{}% 5
+\BOOKMARK [1][-]{section.5}{Lempel-Ziv\(lz\) Compression Methods}{}% 6
+\BOOKMARK [1][-]{section.6}{Run Length Coding}{}% 7
+\BOOKMARK [1][-]{section.7}{Prediction by Partial Matching}{}% 8
+\BOOKMARK [1][-]{section.8}{Arithmetic Coding}{}% 9
+\BOOKMARK [1][-]{section.9}{Deflate}{}% 10
+\BOOKMARK [1][-]{section.10}{Grammar Based Compression}{}% 11
+\BOOKMARK [1][-]{section.11}{Current Research Work}{}% 12
+\BOOKMARK [1][-]{section.12}{Future Scope}{}% 13
+\BOOKMARK [1][-]{section.13}{Conclusion}{}% 14

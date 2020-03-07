@@ -38,18 +38,12 @@
 	
 \subsection*{Objective}
 
-This work aims to provide an introduction to the domain of Data Compression in Information Theory and a review of the existing literature in the field of Algorithms for Lossless Data Compression. We identify and discuss the potential opportunities, barriers and the future scope of the field. We also review data compression methods used for image and audio data.
-
-
-\subsection*{Methods}
-Here we have to explain the methodology we used to write this article. Like how many papers we reviewed and all that. \\
-\lipsum[1]
-
+This work aims to provide an introduction to the domain of Data Compression in Information Theory and a review of the existing literature in the field of Algorithms for Lossless Data Compression. We identify and discuss the potential opportunities, barriers and the future scope of the field. We also review data compression methods used for text, image, video and  audio data.
 
 \subsection*{Results}
-will write this later when the paper is complete.
+Mostly about which algo performs best for what kinda field and all that. will write this later when the paper is complete. \cite{parekar2014lossless} thats a reference example
 
-\lipsum[1]
+
 
 \end{abstract}
 
@@ -57,6 +51,20 @@ will write this later when the paper is complete.
 
 
 \section{Introduction}
+
+A rapid growth in modern communication technology led an explosion in the amount of data we transmit and store. Extremely large files consume significant resources for transmission as well as storage. Due to this exponential increase in the size of the data we transmit, 
+researchers developed algorithms that can be used to compress the data to save storage space and transmission time. Data Compression is a process by which we encode the input data into a representation that occupies fewer bits than the original input. This encoded representation is transmitted and decoded back to the original form at the destination. Data compression algorithms are broadly classified into two classes viz \textbf{Lossless Compression} and \textbf{Lossy Compression} algorithms. We will be only covering Lossless Compression in this article.
+
+Lossless Compression algorithms are a class of algorithms that can reproduce the original content from the encoded respresentation without any loss of information, the data before compression and after decompression is exactly the same. Lossless compression is used in a variety of fields where it is important that the original and decompressed information be the same. The GNU tool gzip uses lossless algorithms for the ZIP file format.
+
+\subsection{Overview of Lossless Data Compression Techniques}
+
+Lossless compression algorithms usually have a two step procedure. 
+\begin{enumerate}
+	\item A probabilistic model of the input data is generated. This usually assigns a probability of occurrence to pieces of input data. For example, if the input data is piece of text, then the model would be the probabilities of occurance of each alphabet
+	
+	\item A coding system uses this model to map the data in a way that the pieces with high probability of occurrence are assigned a shorter code than those with a low probability of occurance
+\end{enumerate}
 
 \section{Prefix Codes}
 	
@@ -81,31 +89,9 @@ will write this later when the paper is complete.
 \section{Future Scope}
 
 \section{Conclusion}
+JHR \\
 
-
-%%% Comment out this section when you \bibliography{references} is enabled.
-\begin{thebibliography}{1}
-
-\bibitem{kour2014real}
-George Kour and Raid Saabne.
-\newblock Real-time segmentation of on-line handwritten arabic script.
-\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
-  International Conference on}, pages 417--422. IEEE, 2014.
-
-\bibitem{kour2014fast}
-George Kour and Raid Saabne.
-\newblock Fast classification of handwritten on-line arabic characters.
-\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
-  International Conference of}, pages 312--318. IEEE, 2014.
-
-\bibitem{hadash2018estimate}
-Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
-  Jacovi.
-\newblock Estimate and replace: A novel approach to integrating deep neural
-  networks with existing applications.
-\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
-
-\end{thebibliography}
-
+\bibliographystyle{unsrt}
+\bibliography{main}
 
 \end{document}
