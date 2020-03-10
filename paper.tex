@@ -61,15 +61,55 @@ Lossless Compression algorithms are a class of algorithms that can reproduce the
 
 Lossless compression algorithms usually have a two step procedure. 
 \begin{enumerate}
-	\item A probabilistic model of the input data is generated. This usually assigns a probability of occurrence to pieces of input data. For example, if the input data is piece of text, then the model would be the probabilities of occurance of each alphabet
+	\item A statistical model of the input data is generated. This usually assigns a probability of occurrence to pieces of input data. For example, if the input data is piece of text, then the model would be the probabilities of occurance of each alphabet
 	
 	\item A coding system uses this model to map the data in a way that the pieces with high probability of occurrence are assigned a shorter code than those with a low probability of occurance
 \end{enumerate}
+
+The probabalistic model is usually generated in two ways, a static way and an adaptive/dynamic way. In the static approach, the data is analysed and the probability model is generated before starting the compression, this is a modular and simple approach but doesn't perform well for heterogeneous data since the approach forces the use of a single model for the all the data. In the dynamic method the model is updated while compressing the data. The encoder and decoder start with a trivial model in the initial state, thus performs poorly on initial data, but as the model adapts to the data, the performance improves. Most efficient compression techniques usually employ an adaptive model.
 
 \section{Prefix Codes}
 	
 \section {Shanon Coding}
 
+It is named after its creator \textbf{Claude Shanon}, the technique was used to prove Shanon's noiseless coding theorem in his 1948 article "A Mathematical Theory of Communication". Even though being suboptimal, the method was a first of its kind. This method is credited to have given rise to the entire field of Information Theory. Some of the most efficient compression algorithms today are usually an exntension of shanon's method
+
+Shanon Coding is a method to generate prefix codes for a given piece of data. It is done using the occurrence probabilities of the pieces of data. First the probabilities $p_{i}$ are arranged in descending order, then each piece is assigned a code which is the first $l_{i}$ digits of binary representation of the cumulative probability till that piece of data. 
+
+
+Given that the probability of occurrence is $p_{i}$, the cumulative probability is expressed as 
+$$\sum_{k=0}^{i-1} p_{k}$$ where $l_{i} = \left \lceil \log_{2} p_{i} \right \rceil$ \\
+
+It is a suboptimal algorithm, it does not give the lowest possible code word length.
+
+The following is an example of assigning prefix codes to compress the string "lossless data compression"
+
+
+\begin{center}
+	\begin{tabular}{ccccccl}
+		\toprule
+		$i$ & $a_{i}$ &     $p_{i}$ &  $p_{c} = \sum\limits_{k=0}^{i-1} p_{k}$ &    Binary Representation &  $l_{i} = \left \lceil \log_{2} p_{i} \right \rceil$ &  code \\
+		\midrule
+		0  &        s &  0.24 &          0.00 &  0.00000000... &               2 &    00 \\
+		1  &        o &  0.12 &          0.24 &  0.00111101... &               3 &   001 \\
+		2  &        e &  0.08 &          0.36 &  0.01011100... &               3 &   010 \\
+		3  &   <space>  &  0.08 &          0.44 &  0.01110000... &               3 &   011 \\
+		4  &        a &  0.08 &          0.52 &  0.10000101... &               3 &   100 \\
+		5  &        l &  0.08 &          0.60 &  0.10011001... &               3 &   100 \\
+		6  &        i &  0.04 &          0.68 &  0.10101110... &               4 &  1010 \\
+		7  &        d &  0.04 &          0.72 &  0.10111000... &               4 &  1011 \\
+		8  &        t &  0.04 &          0.76 &  0.11000010... &               4 &  1100 \\
+		9  &        c &  0.04 &          0.80 &  0.11001100... &               4 &  1100 \\
+		10 &        m &  0.04 &          0.84 &  0.11010111... &               4 &  1101 \\
+		11 &        r &  0.04 &          0.88 &  0.11100001... &               4 &  1110 \\
+		12 &        p &  0.04 &          0.92 &  0.11101011... &               4 &  1110 \\
+		13 &        n &  0.04 &          0.96 &  0.11110101... &               4 &  1111 \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+
+ 
 \section {Huffman Coding}
 
 \section{Lempel-Ziv(lz) Compression Methods}
