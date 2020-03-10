@@ -69,6 +69,7 @@ Lossless compression algorithms usually have a two step procedure.
 The probabalistic model is usually generated in two ways, a static way and an adaptive/dynamic way. In the static approach, the data is analysed and the probability model is generated before starting the compression, this is a modular and simple approach but doesn't perform well for heterogeneous data since the approach forces the use of a single model for the all the data. In the dynamic method the model is updated while compressing the data. The encoder and decoder start with a trivial model in the initial state, thus performs poorly on initial data, but as the model adapts to the data, the performance improves. Most efficient compression techniques usually employ an adaptive model.
 
 \section{Prefix Codes}
+\lipsum[1]
 	
 \section {Shanon Coding}
 
@@ -78,7 +79,7 @@ Shanon Coding is a method to generate prefix codes for a given piece of data. It
 
 
 Given that the probability of occurrence is $p_{i}$, the cumulative probability is expressed as 
-$$\sum_{k=0}^{i-1} p_{k}$$ where $l_{i} = \left \lceil \log_{2} p_{i} \right \rceil$ \\
+$$\sum_{k=0}^{i-1} p_{k}$$ where $l_{i} = \left \lceil \log_{2} p_{i} \right \rceil$ 
 
 It is a suboptimal algorithm, it does not give the lowest possible code word length.
 
