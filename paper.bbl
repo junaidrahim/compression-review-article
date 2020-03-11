@@ -6,4 +6,16 @@ PM~Parekar and SS~Thakare.
 \newblock {\em International Journal of Computer Science \& Information
   Technologies}, 5(1), 2014.
 
+\bibitem{yellamma2012performance}
+P~Yellamma and Narasimham Challa.
+\newblock Performance analysis of different data compression techniques on text
+  file.
+\newblock {\em International Journal of Engineering Research \& Technology
+  (IJERT)}, 1(8):1--6, 2012.
+
+\bibitem{shannon1948mathematical}
+Claude~E Shannon.
+\newblock A mathematical theory of communication.
+\newblock {\em Bell system technical journal}, 27(3):379--423, 1948.
+
 \end{thebibliography}

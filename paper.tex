@@ -36,28 +36,30 @@
 
 \begin{abstract}
 	
-\subsection*{Objective}
 
-This work aims to provide an introduction to the domain of Data Compression in Information Theory and a review of the existing literature in the field of Algorithms for Lossless Data Compression. We identify and discuss the potential opportunities, barriers and the future scope of the field. We also review data compression methods used for text, image, video and  audio data.
+This work aims to provide an introduction to the domain of Data Compression in Information Theory and a comprehensive review of the existing literature in the field of algorithms for Lossless Data Compression. We identify and discuss the potential opportunities, barriers and the future scope of the field. We also review data compression methods used for text, image, video and  audio data.
 
-\subsection*{Results}
-Mostly about which algo performs best for what kinda field and all that. will write this later when the paper is complete. \cite{parekar2014lossless} thats a reference example
+%\subsection*{Results}
+%Mostly about which algo performs best for what kinda field and all that. will write this later when the paper is complete. thats a reference example
 
 
 
 \end{abstract}
 
-\keywords{Data Compression \and Algorithms \and Lossless Compression \and Information Theory}
+\keywords{Data Compression \and Algorithms \and Lossless Data Compression \and Information Theory}
 
 
 \section{Introduction}
 
 A rapid growth in modern communication technology led an explosion in the amount of data we transmit and store. Extremely large files consume significant resources for transmission as well as storage. Due to this exponential increase in the size of the data we transmit, 
-researchers developed algorithms that can be used to compress the data to save storage space and transmission time. Data Compression is a process by which we encode the input data into a representation that occupies fewer bits than the original input. This encoded representation is transmitted and decoded back to the original form at the destination. Data compression algorithms are broadly classified into two classes viz \textbf{Lossless Compression} and \textbf{Lossy Compression} algorithms. We will be only covering Lossless Compression in this article.
+researchers developed algorithms that can be used to compress the data to save storage space and transmission time. Data Compression is a process by which we encode the input data into a representation that occupies fewer bits than the original input. This encoded representation is transmitted and decoded back to the original form at the destination. Data compression algorithms are broadly classified into two classes viz \textbf{Lossless Compression} and \textbf{Lossy Compression} algorithms. We will be only covering Lossless Data Compression in this review article.
 
-Lossless Compression algorithms are a class of algorithms that can reproduce the original content from the encoded respresentation without any loss of information, the data before compression and after decompression is exactly the same. Lossless compression is used in a variety of fields where it is important that the original and decompressed information be the same. The GNU tool gzip uses lossless algorithms for the ZIP file format.
+\subsection{History of Data Compression}
+
 
 \subsection{Overview of Lossless Data Compression Techniques}
+
+Lossless Compression algorithms are a class of algorithms that can reproduce the original content from the encoded respresentation without any loss of information, the data before compression and after decompression is exactly the same. Lossless compression is used in a variety of fields where it is important that the original and decompressed information be the same. The GNU tool gzip uses lossless algorithms for the ZIP file format.
 
 Lossless compression algorithms usually have a two step procedure. 
 \begin{enumerate}
@@ -66,14 +68,14 @@ Lossless compression algorithms usually have a two step procedure.
 	\item A coding system uses this model to map the data in a way that the pieces with high probability of occurrence are assigned a shorter code than those with a low probability of occurance
 \end{enumerate}
 
-The probabalistic model is usually generated in two ways, a static way and an adaptive/dynamic way. In the static approach, the data is analysed and the probability model is generated before starting the compression, this is a modular and simple approach but doesn't perform well for heterogeneous data since the approach forces the use of a single model for the all the data. In the dynamic method the model is updated while compressing the data. The encoder and decoder start with a trivial model in the initial state, thus performs poorly on initial data, but as the model adapts to the data, the performance improves. Most efficient compression techniques usually employ an adaptive model.
+The probabalistic model is usually generated in two ways, a static way and an adaptive/dynamic way. In the static approach, the data is analysed and the probability model is generated before starting the encoding procedure, this is a modular and simple approach but doesn't perform well for heterogeneous data since the approach forces the use of a single model for the all the data. In the dynamic method, the model is updated while compressing the data. The encoder and decoder start with a trivial model in the initial state, thus performs poorly on initial data, but as the model adapts to the data, the performance improves. Most efficient compression techniques usually employ an adaptive model. There are various ways to achieve losseless compression namely Run Length Encoding (RLE), Lossless predictive coding (LPC), Entropy coding and Arithmetic coding etc.\cite{parekar2014lossless}\cite{yellamma2012performance}
 
 \section{Prefix Codes}
 \lipsum[1]
 	
 \section {Shanon Coding}
 
-It is named after its creator \textbf{Claude Shanon}, the technique was used to prove Shanon's noiseless coding theorem in his 1948 article "A Mathematical Theory of Communication". Even though being suboptimal, the method was a first of its kind. This method is credited to have given rise to the entire field of Information Theory. Some of the most efficient compression algorithms today are usually an exntension of shanon's method
+It is named after its creator \textbf{Claude Shanon}, the technique was used to prove Shanon's noiseless coding theorem in his 1948 article "A Mathematical Theory of Communication"\cite{shannon1948mathematical}. Even though being suboptimal, the method was a first of its kind. This method is credited to have given rise to the entire field of Information Theory. Some of the most efficient compression algorithms today are usually an exntension of shanon's method
 
 Shanon Coding is a method to generate prefix codes for a given piece of data. It is done using the occurrence probabilities of the pieces of data. First the probabilities $p_{i}$ are arranged in descending order, then each piece is assigned a code which is the first $l_{i}$ digits of binary representation of the cumulative probability till that piece of data. 
 
