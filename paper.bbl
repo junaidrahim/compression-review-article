@@ -1,5 +1,25 @@
 \begin{thebibliography}{1}
 
+\bibitem{shannon1948mathematical}
+Claude~E Shannon.
+\newblock A mathematical theory of communication.
+\newblock {\em Bell system technical journal}, 27(3):379--423, 1948.
+
+\bibitem{huffman1952method}
+David~A Huffman.
+\newblock A method for the construction of minimum-redundancy codes.
+\newblock {\em Proceedings of the IRE}, 40(9):1098--1101, 1952.
+
+\bibitem{ziv1977universal}
+Jacob Ziv and Abraham Lempel.
+\newblock A universal algorithm for sequential data compression.
+\newblock {\em IEEE Transactions on information theory}, 23(3):337--343, 1977.
+
+\bibitem{burrows1994block}
+Michael Burrows and David~J Wheeler.
+\newblock A block-sorting lossless data compression algorithm.
+\newblock 1994.
+
 \bibitem{parekar2014lossless}
 PM~Parekar and SS~Thakare.
 \newblock Lossless data compression algorithm--a review.
@@ -12,10 +32,5 @@ P~Yellamma and Narasimham Challa.
   file.
 \newblock {\em International Journal of Engineering Research \& Technology
   (IJERT)}, 1(8):1--6, 2012.
-
-\bibitem{shannon1948mathematical}
-Claude~E Shannon.
-\newblock A mathematical theory of communication.
-\newblock {\em Bell system technical journal}, 27(3):379--423, 1948.
 
 \end{thebibliography}
