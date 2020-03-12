@@ -33,4 +33,21 @@ P~Yellamma and Narasimham Challa.
 \newblock {\em International Journal of Engineering Research \& Technology
   (IJERT)}, 1(8):1--6, 2012.
 
+\bibitem{berstel1985theory}
+Jean Berstel and Dominique Perrin.
+\newblock {\em Theory of codes}.
+\newblock Academic Press, 1985.
+
+\bibitem{fano1949transmission}
+Robert~M Fano.
+\newblock {\em The transmission of information}.
+\newblock Massachusetts Institute of Technology, Research Laboratory of
+  Electronics~…, 1949.
+
+\bibitem{kraft1949device}
+Leon~Gordon Kraft.
+\newblock {\em A device for quantizing, grouping, and coding
+  amplitude-modulated pulses}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 1949.
+
 \end{thebibliography}

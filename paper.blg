@@ -4,45 +4,45 @@ The top-level auxiliary file: paper.aux
 The style file: unsrt.bst
 Database file #1: main.bib
 Warning--empty journal in burrows1994block
-You've used 6 entries,
+You've used 9 entries,
             1791 wiz_defined-function locations,
-            487 strings with 4426 characters,
-and the built_in function-call counts, 1228 in all, are:
-= -- 116
-> -- 40
+            501 strings with 4799 characters,
+and the built_in function-call counts, 1660 in all, are:
+= -- 153
+> -- 56
 < -- 0
-+ -- 16
-- -- 10
-* -- 86
-:= -- 203
-add.period$ -- 18
-call.type$ -- 6
++ -- 23
+- -- 14
+* -- 98
+:= -- 277
+add.period$ -- 27
+call.type$ -- 9
 change.case$ -- 6
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 52
-empty$ -- 124
-format.name$ -- 10
-if$ -- 262
+cite$ -- 10
+duplicate$ -- 79
+empty$ -- 173
+format.name$ -- 14
+if$ -- 361
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 33
-num.names$ -- 6
-pop$ -- 10
+int.to.str$ -- 9
+missing$ -- 10
+newline$ -- 48
+num.names$ -- 9
+pop$ -- 26
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 23
+skip$ -- 30
 stack$ -- 0
 substring$ -- 94
-swap$ -- 5
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 14
-width$ -- 7
-write$ -- 66
+while$ -- 17
+width$ -- 10
+write$ -- 97
 (There was 1 warning)
