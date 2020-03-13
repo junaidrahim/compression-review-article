@@ -11,7 +11,9 @@
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{xfrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
-
+\usepackage{array}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \title{A Review of Lossless Data Compression Algorithms}
 
@@ -81,10 +83,18 @@ Lossless compression algorithms usually have a two step procedure.
 The probabalistic model is usually generated in two ways, a static way and an adaptive/dynamic way. In the static approach, the data is analysed and the probability model is generated before starting the encoding procedure, this is a modular and simple approach but doesn't perform well for heterogeneous data since the approach forces the use of a single model for the all the data. In the dynamic method, the model is updated while compressing the data. The encoder and decoder start with a trivial model in the initial state, thus performs poorly on initial data, but as the model adapts to the data, the performance improves. Most efficient compression techniques usually employ an adaptive model. There are various ways to achieve losseless compression namely Run Length Encoding (RLE), Lossless predictive coding (LPC), Entropy coding and Arithmetic coding etc.\cite{parekar2014lossless}\cite{yellamma2012performance}
 
 \section{Prefix Codes and Entropy}
-In order to understand different algorithms we need to know about some basic terms like prefix codes an entropy.
-A prefix code is a 'code' sytem in which the codes given to each character is not the prefix of the code given to any other character i.e. it follows the prefix property\cite{berstel1985theory}.Ex-{2,42,12} is an example of a prefix system whereas {2,42,12,21} is not because '2' is the prefix of '21'.Prefix codes are also known as prefix-free codes, prefix condition codes and instantaneous codes.They are uniquely decodable codes that is no two codes will have the same value on decoding.Prefix codes can be both fixed length and of variable length.It does not require between words to seperate them.Variable length preifx codes have been used extensibly is data compression algorithms(ex-Huffman and shannon coding algorithms) and are still used in modern compression algoritms along with arithmetic coding.
 
-Entropy denote the randomness of the data that you are inputing to the compression algorithm .That means the more random the text(i.e. higher entropy) is, the lesser you can compress it.It represents an absolute limit on the best possible lossless compression of any communication: treating messages to be encoded as a sequence of independent and identically distributed random variables.Shannon's source coding theorem shows that, the average length of the shortest possible representation to encode the messages in a given alphabet is their given by the formula WIKIPEDIA KHOL KE COPY KARNA PLEZ(SAB VARIABLE KYA HOTA HAI WOH BHI LKHNA)
+In order to understand different algorithms we need to know about some basic terms like prefix codes and entropy. A prefix code is a 'code' system in which the codes given to each character is not the prefix of the code given to any other character i.e. it follows the prefix property \cite{berstel1985theory}. For example $\{2,42,12\}$ is an example of a prefix system whereas $\{2,42,12,21\}$ is not because '2' is the prefix of '21'.
+
+Prefix codes are also known as prefix-free codes, prefix condition codes and instantaneous codes. They are uniquely decodable codes that is no two codes will have the same value on decoding. Prefix codes can be both fixed length and of variable length. It does not require between words to seperate them. Variable length preifx codes have been used extensibly is data compression algorithms (ex-Huffman and shannon coding algorithms) and are still used in modern compression algoritms along with arithmetic coding.
+
+Entropy denote the randomness of the data that you are inputing to the compression algorithm. That means the more random the text i.e. higher entropy is, the lesser you can compress it. It represents an absolute limit on the best possible lossless compression of any communication: treating messages to be encoded as a sequence of independent and identically distributed random variables. Shannon's source coding theorem shows that, the average length of the shortest possible representation to encode the messages in a given alphabet is expressed as follows
+
+Given a random variable $X$, with possible outcomes $x_{i}$, each with probability $P_{X}(x_{i})$, the entropy $H(X)$ of $X$ is as follows:
+
+$$H(X) = - \sum_{i=1}^{n} P_X(x_{i}) \log_{b} P_X(x_{i}) = \sum_{i=1}^{n} P_X(x_{i})I_X(x_{i}) = E[I_X] $$
+
+where $b$ is the base of the logarithm
 
 \section {Shanon Coding}
 
@@ -127,34 +137,53 @@ The following is an example of assigning prefix codes to compress the string "lo
 
  
 \section {Huffman Coding}
-It is named after its creator David A Huffman.Although C.E. Shannon\cite{shannon1948mathematical} and R.M.Fano\cite{fano1949transmission} developed ensemble coding procedures to prove that the average number of binary digits required per message approaches from above the average amount of information per message,it was not optimum.Kraft\cite{kraft1949device} had derived a coding method which gives an average code length as close as possible to the ideal when the ensemble contains a finite number of members.However Huffman was able to derive a definte procedure for this.
-The output of the Huffman table given us a prefix-variable code table which consists of the source symbol and the encoded symbol.Like Shannon coding Huffman algorithm also tries to minimize the entropy by assisgning shortest codes to the charcters which occur most frequently.
-The algoritm works by creating a binary tree(using a min heap) which can have either leaf nodes or internal nodes.The leaf node contains the weight and the symbol whereas the internal nodes consists of weight and links to the two child nodes.The bit '0' is used to reprsent the left child of an internal nodes whereas the bit '1' is used to represent the right child.
+It is named after its creator David A Huffman.Although C.E. Shannon \cite{shannon1948mathematical} and R.M.Fano \cite{fano1949transmission} developed ensemble coding procedures to prove that the average number of binary digits required per message approaches from above the average amount of information per message,it was not optimum. Kraft \cite{kraft1949device} had derived a coding method which gives an average code length as close as possible to the ideal when the ensemble contains a finite number of members.However Huffman was able to derive a definte procedure for this. The output of the Huffman table given us a prefix-variable code table which consists of the source symbol and the encoded symbol. Like Shannon coding Huffman algorithm also tries to minimize the entropy by assisgning shortest codes to the charcters which occur most frequently. The algoritm works by creating a binary tree(using a min heap) which can have either leaf nodes or internal nodes. The leaf node contains the weight and the symbol whereas the internal nodes consists of weight and links to the two child nodes. The bit '0' is used to reprsent the left child of an internal nodes whereas the bit '1' is used to represent the right child.
 
-Steps to building a Huffman Tree:-
-1.The process begins by traversing the input string and finding all the unique charcters along with their frequencies.
-2.Then create a leaf node for each symbol and their frequencies(weight) and add build a min heap of all the leaf nodes.
-3.Take the two nodes with the minimum weight and create a new  internal node with the weight equal to the sum of the frequencies of the 2 nodes.Make the first extracted child as the left node and the second extracted child as the right node and add it to the min heap.
-4.Repeat the steps until the heap contains only one node.
+Steps to build a Huffman Tree:-
+
+\begin{enumerate}
+	\item The process begins by traversing the input string and finding all the unique charcters along with their frequencies.
+	\item Then create a leaf node for each symbol and their frequencies(weight) and add build a min heap of all the leaf nodes.
+	\item Take the two nodes with the minimum weight and create a new  internal node with the weight equal to the sum of the frequencies of the 2 nodes.Make the first extracted child as the left node and the second extracted child as the right node and add it to the min heap.
+	\item Repeat the steps until the heap contains only one node.
+\end{enumerate}
 
 Letter freqency table
 
-Letter	Z	K	M	C	U	D	L	E
-Frequency	2	7	24	32	37	42	42	120
-Huffman code
+\begin{flushleft}
+	\setlength{\extrarowheight}{0.2cm}
+	\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+		\hline
+		Letter    & Z	 & K & M  & C  & U  & D  & L  & E   \\ \hline
+		Frequency & 2 & 7 & 24 & 32 & 37 & 42 & 42 & 120 \\ \hline
+	\end{tabular}
+\end{flushleft}
 
-Letter	Freq	Code	Bits\\
-E		120		0 		1\\
-D	42	101	3\\
-L	42	110	3\\
-U	37	100	3\\
-C	32	1110	4\\
-M	24	11111	5\\
-K	7	111101	6\\
-Z	2	111100	6\\
- 
-Decoding the Huffman tree is very simple.All we have to do is to traverse the tree node by node as each bit is read from the input stream (reaching a leaf node necessarily terminates the search for that particular byte value).Ex-Decoding an encoded string can be done by looking at the bits in the coded string from left to right until a letter decoded.
-10100101 -> DEED
+
+Huffman Code\
+
+\begin{flushleft}
+	\setlength{\extrarowheight}{0.2cm}
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Letter & Freq & Code   & Bits \\ \hline
+		E      & 120  & 0      & 1    \\ \hline
+		D      & 42   & 101    & 3    \\ \hline
+		L      & 42   & 110    & 3    \\ \hline
+		U      & 37   & 100    & 3    \\ \hline
+		C      & 32   & 1110   & 4    \\ \hline
+		M      & 24   & 11111  & 5    \\ \hline
+		K      & 7    & 111101 & 6    \\ \hline
+		Z      & 2    & 111100 & 6    \\ \hline
+	\end{tabular}
+\end{flushleft}
+
+\begin{center}
+	\includegraphics[width=10cm]{huffman_tree}
+\end{center}
+
+Decoding the Huffman tree is very simple. All we have to do is to traverse the tree node by node as each bit is read from the input stream (reaching a leaf node necessarily terminates the search for that particular byte value). Ex-Decoding an encoded string can be done by looking at the bits in the coded string from left to right until a letter decoded.
+10100101 $\Rightarrow$ DEED
 
 \section{Lempel-Ziv(lz) Compression Methods}
 
@@ -173,7 +202,6 @@ Decoding the Huffman tree is very simple.All we have to do is to traverse the tr
 \section{Future Scope}
 
 \section{Conclusion}
-JHR \\
 
 \bibliographystyle{unsrt}
 \bibliography{main}
