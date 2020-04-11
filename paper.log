@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.28)  13 MAR 2020 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.28)  11 APR 2020 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,38 +1135,34 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
  [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 3078) has occurred while \output is active []
-
- [2]
-[3]
-<./images/huffman_tree.png, id=110, 530.98375pt x 362.35374pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<./images/huffman_tree.png, id=112, 530.98375pt x 362.35374pt>
 File: ./images/huffman_tree.png Graphic file (type png)
 <use ./images/huffman_tree.png>
-Package pdftex.def Info: ./images/huffman_tree.png  used on input line 182.
+Package pdftex.def Info: ./images/huffman_tree.png  used on input line 183.
 (pdftex.def)             Requested size: 284.52756pt x 194.16972pt.
  (./paper.bbl
-Underfull \vbox (badness 1694) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4 <./images/huffman_tree.png (PNG copy)>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
  (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 7A898E0B4F35CA6041C607632B4EE297;876.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 17235 strings out of 494847
- 313251 string characters out of 6179079
- 405707 words of memory out of 5000000
+ 17241 strings out of 494847
+ 313296 string characters out of 6179079
+ 406708 words of memory out of 5000000
  20228 multiletter control sequences out of 15000+600000
- 573297 words of font info for 136 fonts, out of 8000000 for 9000
+ 573557 words of font info for 140 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 32i,11n,45p,10401b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,10n,45p,10401b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/junaid/.te
 xlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/te
@@ -1179,7 +1175,7 @@ ts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (5 pages, 161589 bytes).
+Output written on paper.pdf (5 pages, 161469 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  156 compressed objects within 2 object streams

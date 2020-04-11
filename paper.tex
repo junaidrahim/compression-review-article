@@ -26,7 +26,7 @@
 	\texttt{adityameharia14@gmail.com} \\
   	%% examples of more authors
 	\And
-   	Junaid H Rahim\\
+   	Junaid H. Rahim\\
 	School of Computer Engineering\\
 	Kalinga Institute of Industrial Technology\\
 	Bhubaneswar, India 751024 \\
@@ -53,11 +53,11 @@ This work aims to provide an introduction to the domain of Data Compression in I
 
 \section{Introduction}
 
-A rapid growth in modern communication technology led an explosion in the amount of data we transmit and store. Extremely large files consume significant resources for transmission as well as storage. Due to this exponential increase in the size of the data we transmit, researchers developed algorithms that can be used to compress the data to save storage space as well as transmission time. Data Compression is a process by which we encode the input data into a representation that occupies fewer bits than the original input. This encoded representation is transmitted and decoded back to the original form at the destination. Data compression algorithms are broadly classified into two classes viz \textbf{Lossless Compression} and \textbf{Lossy Compression} algorithms. We will be only covering Lossless Data Compression in this review article.
+A rapid growth in modern communication technology led an explosion in the amount of data we transmit and store. Large files consume significant resources for transmission as well as storage. Due to this exponential increase in the size of the data we transmit, researchers developed algorithms that can be used to compress the data to save storage space as well as transmission time. Data Compression is a process by which we encode the input data into a representation that occupies fewer bits than the original input. This encoded representation is transmitted and decoded back to the original form at the destination. Data compression algorithms are broadly classified into two classes viz \textbf{Lossless Compression} and \textbf{Lossy Compression} algorithms. We will be only covering Lossless Data Compression algorithms in this review article.
 
 \subsection{History of Data Compression}
 
-The field of data compression gained huge significance in the 1970s after the surge in the usage of the internet. The need to decrease transmission time pushed computer scientists to find new ways to compress information. Although, the very earliest form of compression was Morse Code, invented in 1838, in Morse code the letters 'e' and 't' from the english language were given shorter codes as they have a high probability of occurrence.
+The field of data compression gained huge significance in the 1970s after the surge in the usage of the internet. The need to reduce transmission time pushed computer scientists to find new ways to compress information. Although, the very earliest form of compression was Morse Code, invented in 1838, in Morse code the letters 'e' and 't' from the english language were given shorter codes as they have a high probability of occurrence.
 
 Later with the advent of mainframe computers, Calude Shanon and Robert Fano invented Shanon-Fano coding in 1949\cite{shannon1948mathematical}, the algorithm assigns shorter codes to symbols with high probability resulting in a shorter way to represent the data. In 1952, David Huffman, one of the students of Robert Fano at MIT studying information theory took the option to write a term paper when given a choice between taking a final exam or writing a paper. Huffman was interested in finding the most efficient way to assign prefix codes to a set of symbols, after months of work Huffman published Huffman Coding in his paper "A Method for the Construction of Minimum-Redundancy Codes"\cite{huffman1952method}, Huffman coding was an improvement over Shanon-Fano coding in terms of efficiency as it assured the assignment of the shortest possible codes to the given symbols. The early implementations of Shanon-Fano coding and Huffman coding were done using hardcoded codes, later in the 1970s, software compression was implemented and Huffman Codes were dynamically generated depending on the input data.
 
@@ -84,17 +84,16 @@ The probabalistic model is usually generated in two ways, a static way and an ad
 
 \section{Prefix Codes and Entropy}
 
-In order to understand different algorithms we need to know about some basic terms like prefix codes and entropy. A prefix code is a 'code' system in which the codes given to each character is not the prefix of the code given to any other character i.e. it follows the prefix property \cite{berstel1985theory}. For example $\{2,42,12\}$ is an example of a prefix system whereas $\{2,42,12,21\}$ is not because '2' is the prefix of '21'.
+A prefix code is a "code" system in which the codes given to each character is not the prefix of the code given to any other character i.e. it follows the prefix property \cite{berstel1985theory}. For example $\{2,42,12\}$ is an example of a prefix system whereas $\{2,42,12,21\}$ is not because '2' is the prefix of '21'.
 
-Prefix codes are also known as prefix-free codes, prefix condition codes and instantaneous codes. They are uniquely decodable codes that is no two codes will have the same value on decoding. Prefix codes can be both fixed length and of variable length. It does not require between words to seperate them. Variable length preifx codes have been used extensibly is data compression algorithms (ex-Huffman and shannon coding algorithms) and are still used in modern compression algoritms along with arithmetic coding.
+Prefix codes are also known as prefix-free codes, prefix condition codes and instantaneous codes. They are uniquely decodable codes that is no two codes will have the same value on decoding. Prefix codes can be both fixed length and of variable length. It does not require between words to seperate them. Variable length preifx codes have been used extensibly in Huffman and Shannon coding and are still used in modern compression algorithms along with arithmetic coding.
 
-Entropy denote the randomness of the data that you are inputing to the compression algorithm. That means the more random the text i.e. higher entropy is, the lesser you can compress it. It represents an absolute limit on the best possible lossless compression of any communication: treating messages to be encoded as a sequence of independent and identically distributed random variables. Shannon's source coding theorem shows that, the average length of the shortest possible representation to encode the messages in a given alphabet is expressed as follows
+Entropy denotes the randomness of the data that you are passing as input to the compression algorithm. That means the more random the text i.e. higher entropy is, the lesser you can compress it. It represents an absolute limit on the best possible lossless compression of any communication: treating messages to be encoded as a sequence of independent and identically distributed random variables. Shannon's source coding theorem shows that, the average length of the shortest possible representation to encode the messages in a given alphabet is expressed as follows
 
-Given a random variable $X$, with possible outcomes $x_{i}$, each with probability $P_{X}(x_{i})$, the entropy $H(X)$ of $X$ is as follows:
+Given a random variable $X$, with possible outcomes $x_{i}$, each with probability $P_{X}(x_{i})$, the entropy $H(X)$ of $X$, where $b$ is the base of the logarithm is as follows:
 
 $$H(X) = - \sum_{i=1}^{n} P_X(x_{i}) \log_{b} P_X(x_{i}) = \sum_{i=1}^{n} P_X(x_{i})I_X(x_{i}) = E[I_X] $$
 
-where $b$ is the base of the logarithm
 
 \section {Shanon Coding}
 
@@ -137,7 +136,9 @@ The following is an example of assigning prefix codes to compress the string "lo
 
  
 \section {Huffman Coding}
-It is named after its creator David A Huffman.Although C.E. Shannon \cite{shannon1948mathematical} and R.M.Fano \cite{fano1949transmission} developed ensemble coding procedures to prove that the average number of binary digits required per message approaches from above the average amount of information per message,it was not optimum. Kraft \cite{kraft1949device} had derived a coding method which gives an average code length as close as possible to the ideal when the ensemble contains a finite number of members.However Huffman was able to derive a definte procedure for this. The output of the Huffman table given us a prefix-variable code table which consists of the source symbol and the encoded symbol. Like Shannon coding Huffman algorithm also tries to minimize the entropy by assisgning shortest codes to the charcters which occur most frequently. The algoritm works by creating a binary tree(using a min heap) which can have either leaf nodes or internal nodes. The leaf node contains the weight and the symbol whereas the internal nodes consists of weight and links to the two child nodes. The bit '0' is used to reprsent the left child of an internal nodes whereas the bit '1' is used to represent the right child.
+Named after its creator David A. Huffman. Although C.E. Shannon \cite{shannon1948mathematical} and R.M.Fano \cite{fano1949transmission} developed ensemble coding procedures to prove that the average number of binary digits required per message approaches from above the average amount of information per message,it was not optimum. Kraft \cite{kraft1949device} had derived a coding method which gives an average code length as close as possible to the ideal when the ensemble contains a finite number of members. However Huffman was able to derive a definte procedure for this. The output of the Huffman table given us a prefix-variable code table which consists of the source symbol and the encoded symbol. 
+
+Like Shannon coding, Huffman algorithm also tries to minimize the entropy by assisgning shortest codes to the charcters which occur most frequently. The algorithm works by creating a binary tree (using a min heap) which can have either leaf nodes or internal nodes. The leaf node contains the weight and the symbol whereas the internal nodes consists of weight and links to the two child nodes. The bit '0' is used to reprsent the left child of an internal nodes whereas the bit '1' is used to represent the right child.
 
 Steps to build a Huffman Tree:-
 
@@ -182,7 +183,9 @@ Huffman Code\
 	\includegraphics[width=10cm]{huffman_tree}
 \end{center}
 
-Decoding the Huffman tree is very simple. All we have to do is to traverse the tree node by node as each bit is read from the input stream (reaching a leaf node necessarily terminates the search for that particular byte value). Ex-Decoding an encoded string can be done by looking at the bits in the coded string from left to right until a letter decoded.
+Decoding the Huffman tree is very simple, traverse the tree node by node as each bit is read from the input stream (reaching a leaf node necessarily terminates the search for that particular byte value). 
+
+For example, decoding an encoded string can be done by looking at the bits in the coded string from left to right until a letter decoded.
 10100101 $\Rightarrow$ DEED
 
 \section{Lempel-Ziv(lz) Compression Methods}
