@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{shannon1948mathematical}
 Claude~E Shannon.
@@ -49,5 +49,12 @@ Leon~Gordon Kraft.
 \newblock {\em A device for quantizing, grouping, and coding
   amplitude-modulated pulses}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 1949.
+
+\bibitem{10.1145/2064448.2064473}
+Kyosuke Nishida, Ryohei Banno, Ko~Fujimura, and Takahide Hoshide.
+\newblock Tweet classification by data compression.
+\newblock In {\em Proceedings of the 2011 International Workshop on DETecting
+  and Exploiting Cultural DiversiTy on the Social Web}, DETECT ’11, page
+  29–34, New York, NY, USA, 2011. Association for Computing Machinery.
 
 \end{thebibliography}
