@@ -194,17 +194,67 @@ For example, decoding an encoded string can be done by looking at the bits in th
 
 \section{Deflate}
 
-\section{Current Research Work}
+\vspace{0.3in}
+
+\textbf{\Large{Current Research Work}}
 
 The current research work in Data Compression has shifted more towards the application part, where data compression is being applied in all sorts of fields like Deep Learning, Networking, Image Compression, Video and Audio Compression etc. We have discussed few papers which represent the research done in various domains to get the most out of data compression and make computing systems more efficient.
 
-\subsection{Tweet classification by data compression\cite{10.1145/2064448.2064473}}
+\section{Tweet Classification By Data Compression \cite{10.1145/2064448.2064473}}
+
+The above mentioned paper proposes a compression based method for classification of tweets. They used the DEFLATE algorithm to compress the tweet and then evaluate and classify the given tweet according to its compressibility. The proposed method achieved higher accuracy when compared to the state of the art learning methods. 
+
+\subsection{Proposed Method}
+
+The main problem was to classify the tweet according to the sentiment of the tweet, i.e classifying them into "positive" and "negative" classes. The algorithm was fed query strings and then slow it learns the difference by creating two tweet models $M_n$ and $M_p$. Finally the algorithm calculates a classification score $f(x)$ which is then used to finally classify using a fixed threshold value.
+
+\subsection{Classification}
+
+There are 2 steps involved in the classification procedure. The first step calculated the compressibility of the tweet and the second step calculates the classification score. \\ 
+
+The Compressibility scores are calculated as follows  \cite{10.1145/2064448.2064473}
+
+$$C_p = Z(M_p . x) - Z(M_p)$$
+$$C_n = Z(M_n . x) - Z(M_n)$$
+
+Where $C_p$ and $C_n$ are the compressibility scores. $M_p . x$ implies that $x$ is appended to $M_p$ and $Z(k)$ is the compressed size of the input $k$ 
+
+And finally the classification score is calculated as follows
+
+$$
+f(x) = \frac{C_p(x) + \gamma}{C_n(x) + \gamma}
+$$
+
+where $\gamma$ is a smoothing parameter. Also known as Laplace Smoothing. 
+
+\subsection{Results}
+
+According to the results mentioned in the article, CTC performed statistically better than the state of the art methods. This method also applies to multi lingual tweets which gives it an edge over some of the other machine learning approaches.
+
+This paper was an interesting application of the DEFLATE algorithm to classify tweets.
 
 
+\section{Energy Aware Lossless Data Compression \cite{10.1145/1151690.1151692}}
 
-\section{Future Scope}
+This paper reports a rather different viewpoint on the whole compression domain. The energy required to send a bit via wireless transmission is close to 1000 times higher than the energy required for a regular 32 bit operation on a computer. The article reports the fact that compressing and decompressing information before and after transmission is more energy expensive compared to the case without any compression. The paper suggests solutions to this problem and they are able to achive an energy reduction of close to 51\%.
+
+\subsection{Methodologies and Summary}
+The tests were done on a Compaq Personal Server codenamed "Skiff". 
+
+The energy required for compression and decompression are almost directly proportional to time required for executing. The energy required is observed to be more for aggressively compressed data due to the large number of memory references. Even though the energy requirement is proportional to the execution time, using the fastest algorithm for compression and decompression doesn't reduce the energy footprint. They were able to conclude the fact that reducing energy is not as simple as picking the fastest compression algorithm.
+
+The energy requirements of the CPU and Network change drastically. They are extremely difficult to predict over a period of time. Thus software developers have to be aware of their hardware constraints and optimize accordingly to reduce energy footprint. 
+
+\section{Lossless Compression of Already Compressed Textures \cite{strom2011lossless}}
+
+The following cited paper investigates and proposes a lossless compression algorithm for rendering textures in graphics
+
+Compressing textures allow the computer to render more textures due to smaller memory consumption, as the memory access. Compared to image compression methods like JPEG however, textures codecs are typically much less efficient, which is a problem when downloading the texture over a network or reading it from disk. Therefore, in this paper we investigate lossless compression of already compressed textures. By predicting compression parameters in the image domain instead of in the parameter domain, a more efficient representation is obtained compared to using general compression such as ZIP or LZMA. This works well also for pixel indices that have previously proved hard to compress. A 4-bit-perpixel format can thus be compressed to around 2.3 bits per pixel (bpp), or 9.6\% of the original size, compared to around 3.0 bpp when using ZIP or 2.8 bpp using LZMA. Compressing the original
+images with JPEG to the same quality also gives 2.3 bpp, meaning that texture compression followed by our packing is on par with JPEG in terms of compression efficiency.
+
 
 \section{Conclusion}
+
 
 \bibliographystyle{unsrt}
 \bibliography{main}
