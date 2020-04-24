@@ -50,6 +50,17 @@ Leon~Gordon Kraft.
   amplitude-modulated pulses}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 1949.
 
+\bibitem{ziv1978compression}
+Jacob Ziv and Abraham Lempel.
+\newblock Compression of individual sequences via variable-rate coding.
+\newblock {\em IEEE transactions on Information Theory}, 24(5):530--536, 1978.
+
+\bibitem{zeeh2003lempel}
+Christina Zeeh.
+\newblock The lempel ziv algorithm.
+\newblock In {\em URL: http://w3studi. informatik. uni-stuttgart. de/\~{}
+  zeehca/Seminar/LempelZivReport. pdf [accessed November 3, 2003]}, 2003.
+
 \bibitem{10.1145/2064448.2064473}
 Kyosuke Nishida, Ryohei Banno, Ko~Fujimura, and Takahide Hoshide.
 \newblock Tweet classification by data compression.
@@ -67,5 +78,24 @@ Jacob Strom and Per Wennersten.
 \newblock Lossless compression of already compressed textures.
 \newblock In {\em Proceedings of the ACM SIGGRAPH Symposium on High Performance
   Graphics}, pages 177--182, 2011.
+
+\bibitem{10.5555/844174.844187}
+Simon Fenney.
+\newblock Texture compression using low-frequency signal modulation.
+\newblock In {\em Proceedings of the ACM SIGGRAPH/EUROGRAPHICS Conference on
+  Graphics Hardware}, HWWS ’03, page 84–91, Goslar, DEU, 2003. Eurographics
+  Association.
+
+\bibitem{wang2020towards}
+Shurun Wang, Shiqi Wang, Wenhan Yang, Xinfeng Zhang, Shanshe Wang, Siwei Ma,
+  and Wen Gao.
+\newblock Towards analysis-friendly face representation with scalable feature
+  and texture compression.
+\newblock {\em arXiv preprint arXiv:2004.10043}, 2020.
+
+\bibitem{melkman2020compressive}
+Avraham~A Melkman, Sini Guo, Wai-Ki Ching, Pengyu Liu, and Tatsuya Akutsu.
+\newblock On the compressive power of boolean threshold autoencoders.
+\newblock {\em arXiv preprint arXiv:2004.09735}, 2020.
 
 \end{thebibliography}

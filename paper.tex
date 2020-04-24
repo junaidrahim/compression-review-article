@@ -189,6 +189,88 @@ For example, decoding an encoded string can be done by looking at the bits in th
 10100101 $\Rightarrow$ DEED
 
 \section{Lempel-Ziv(lz) Compression Methods}
+Also known as the LZ family,it initially consisted of LZ-77 and LZ-78 which was published by Abraham Lempel and Jacob Ziv in 1977\cite{ziv1977universal} and 1978\cite{ziv1978compression}.Also known as LZ-1 and LZ-2 respectively,both are theoretically dictionary coders.These algorithms formed the basis for a lot of variations like LZW,LZSS,LZMA and also for a lot compression schemes like DEFLATE which has been discussed later in this article.
+\subsection{LZ-77 Algorithm}
+LZ77 algorithms achieve compression by replacing repeated occurrences of data with references to a copy of that data existing earlier within the uncompressed data stream. A match is encoded by a pair of numbers called a length-distance pair, which is like the statement "each of the next length characters is equal to the characters exactly distance characters behind it in the uncompressed stream".
+
+To spot matches, the encoder must keep track of some amount of the recent data, like the last 2 kB, 4 kB, or 32 kB. The structure during which this data is held is named a sliding window , which is why LZ77 is usually called sliding-window compression. The encoder must keep this data to find matches, and therefore the decoder must keep this data to interpret the matches the encoder refers to. The larger the sliding window is, the longer back the encoder may look for creating references.
+
+While encoding, for the search pointer to continue finding matched pairs after the end of the search window, all characters from the primary match at offset D and forward to the end of the search window must have matched input, and these are the (previously seen) characters that comprise one run unit of length LR, which must equal D. When search pointer proceeds past the search window and forward, as long as the run pattern repeats within the input, the search and input pointers are going to be in sync and match characters until the run pattern is interrupted. Then L characters had been matched in total, L > D, and therefore the code is [D, L, c].
+
+Upon decoding [D, L, c], again, D = LR. When the primary LR characters are read to the output, this corresponds to one run unit appended to the output buffer. At this moment , the read pointer might be thought of as only needing to return int(L/LR) + (1 if L mod LR != 0) times to the beginning of that single buffered run unit, read LR characters (or maybe fewer on the last return), and repeat until all of the L characters are read. But mirroring the encoding process, since the pattern is repetitive, the read pointer need only trail in sync with the write pointer by a fixed distance which is equal to the run length LR until L characters are copied to output in total.
+
+\textbf{Pseudocode}
+
+\textbf{while} input not empty \textbf{do}
+
+prefix : longest prefix of input that begins in window
+
+\textbf{if} prefix exists \textbf{then}
+
+j : distance to start of prefix
+
+k : length of prefix
+
+a : char following prefix in input
+
+\textbf{else
+}
+j := 0
+
+k := 0
+
+a := first char of input
+
+\textbf{end if}
+
+\textbf{output} (j,k,a)
+
+s := pop k + 1 chars from front of input
+
+discard k + 1 chars from front of window
+
+append s to back of window
+
+\textbf{repeat}
+\subsection{LZ-78 Algorithm}
+The LZ78 is also a dictionary-based compression algorithm that maintains a dictionary. The encoded output
+consists of two elements: an index pertaining to the longest matching lexical entry and therefore the first non-matching
+symbol. The algorithm also adds the index and symbol pair to the dictionary. When the symbol is not yet found in
+the dictionary, the codeword has the index value 0 and it's added to the dictionary as well . With this method, the
+algorithm constructs the dictionary.
+LZ78 algorithm has the power to capture patterns and hold them indefinitely but it also features a serious drawback.
+The dictionary keeps growing forever without bound. There are a lot of methods to limit dictionary size. the
+easiest one is to stop adding entries and continue like a static dictionary coder or to throw the dictionary away and
+start from scratch after a certain number of entries has been reached\cite{zeeh2003lempel}
+
+\textbf{Pseudocode}
+
+q : NIL;
+
+\textbf{While} (there is input) \textbf{do}{
+	
+	
+	J : next symbol from input;
+	
+	\textbf{If} (qJ exists in the dictionary) \textbf{then} {
+		
+		q : qJ;
+		
+	}
+	
+	\textbf{Else} {
+		
+		\textbf{Output} (index(q), J);
+		
+		Add qJ to the dictionary;
+		
+		q : NIL;
+		
+	}\textbf{end if}
+	
+}\textbf{repeat}
+
+
 
 \section{Arithmetic Coding}
 
@@ -249,9 +331,17 @@ The energy requirements of the CPU and Network change drastically. They are extr
 
 The following cited paper investigates and proposes a lossless compression algorithm for rendering textures in graphics
 
-Compressing textures allow the computer to render more textures due to smaller memory consumption, as the memory access. Compared to image compression methods like JPEG however, textures codecs are typically much less efficient, which is a problem when downloading the texture over a network or reading it from disk. Therefore, in this paper we investigate lossless compression of already compressed textures. By predicting compression parameters in the image domain instead of in the parameter domain, a more efficient representation is obtained compared to using general compression such as ZIP or LZMA. This works well also for pixel indices that have previously proved hard to compress. A 4-bit-perpixel format can thus be compressed to around 2.3 bits per pixel (bpp), or 9.6\% of the original size, compared to around 3.0 bpp when using ZIP or 2.8 bpp using LZMA. Compressing the original
-images with JPEG to the same quality also gives 2.3 bpp, meaning that texture compression followed by our packing is on par with JPEG in terms of compression efficiency.
+Compressing textures allow the computer to render more textures due to smaller memory consumption, as the memory access. Compared to image compression methods like JPEG however, textures codecs are typically much less efficient, which is a problem when downloading the texture over a network or reading it from disk. Therefore, in this paper we investigate lossless compression of already compressed textures. By predicting compression parameters in the image domain instead of in the parameter domain, a more efficient representation is obtained compared to using general compression such as ZIP or LZMA.
 
+\section{Texture compression using low-frequency signal modulation \cite{10.5555/844174.844187}}
+
+A new lossy texture compression technique is presented in this paper that is suited to implementation on low-cost, low-bandwidth devices as well as more powerful rendering systems. It uses a representation that is based on the blending of two (or more) 'low frequency' signals using a high frequency but low precision modulation signal. Continuity of the low frequency signals helps to avoid block artifacts. Decompression costs are kept low through use of fixed-rate encoding and by eliminating indirect data access.
+
+Some of the other interesting papers we found are cited below.
+
+\textbf{Towards Analysis-friendly Face Representation with Scalable Feature and Texture Compression \cite{wang2020towards}}
+
+\textbf{On the Compressive Power of Boolean Threshold Autoencoders \cite{melkman2020compressive}}
 
 \section{Conclusion}
 
