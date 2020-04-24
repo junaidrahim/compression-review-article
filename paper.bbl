@@ -50,6 +50,17 @@ Leon~Gordon Kraft.
   amplitude-modulated pulses}.
 \newblock PhD thesis, Massachusetts Institute of Technology, 1949.
 
+\bibitem{ziv1978compression}
+Jacob Ziv and Abraham Lempel.
+\newblock Compression of individual sequences via variable-rate coding.
+\newblock {\em IEEE transactions on Information Theory}, 24(5):530--536, 1978.
+
+\bibitem{zeeh2003lempel}
+Christina Zeeh.
+\newblock The lempel ziv algorithm.
+\newblock In {\em URL: http://w3studi. informatik. uni-stuttgart. de/\~{}
+  zeehca/Seminar/LempelZivReport. pdf [accessed November 3, 2003]}, 2003.
+
 \bibitem{10.1145/2064448.2064473}
 Kyosuke Nishida, Ryohei Banno, Ko~Fujimura, and Takahide Hoshide.
 \newblock Tweet classification by data compression.

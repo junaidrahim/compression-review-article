@@ -5,9 +5,11 @@
 \BOOKMARK [1][-]{section.3}{Shanon Coding}{}% 5
 \BOOKMARK [1][-]{section.4}{Huffman Coding}{}% 6
 \BOOKMARK [1][-]{section.5}{Lempel-Ziv\(lz\) Compression Methods}{}% 7
-\BOOKMARK [1][-]{section.6}{Arithmetic Coding}{}% 8
-\BOOKMARK [1][-]{section.7}{Deflate}{}% 9
-\BOOKMARK [1][-]{section.8}{Current Research Work}{}% 10
-\BOOKMARK [2][-]{subsection.8.1}{Tweet classification by data compression10.1145/2064448.2064473}{section.8}% 11
-\BOOKMARK [1][-]{section.9}{Future Scope}{}% 12
-\BOOKMARK [1][-]{section.10}{Conclusion}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{LZ-77 Algorithm}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.2}{LZ-78 Algorithm}{section.5}% 9
+\BOOKMARK [1][-]{section.6}{Arithmetic Coding}{}% 10
+\BOOKMARK [1][-]{section.7}{Deflate}{}% 11
+\BOOKMARK [1][-]{section.8}{Current Research Work}{}% 12
+\BOOKMARK [2][-]{subsection.8.1}{Tweet classification by data compression10.1145/2064448.2064473}{section.8}% 13
+\BOOKMARK [1][-]{section.9}{Future Scope}{}% 14
+\BOOKMARK [1][-]{section.10}{Conclusion}{}% 15
