@@ -274,7 +274,11 @@ q : NIL;
 
 \section{Arithmetic Coding}
 
-\section{Deflate}
+Arithmetic coding is a data compression technique that encodes data (the data string) by creating a code string which represents a fractional value on the number line between 0 and 1. The coding algorithm is symbolwise recursive; i.e., it operates upon and encodes (decodes) one data symbol per iteration or recursion. On each recursion, the algorithm successively partitions an interval of the number line between 0 and 1, and retains one of the partitions as the new interval. Thus, the algorithm successively deals with smaller intervals, and the code string, viewed as a magnitude, lies in each of the nested intervals. The data string is recovered by using magnitude comparisons on the code string to recreate how the encoder must have successively partitioned and retained each nested subinterval. Arithmetic coding differs considerably from the more familiar compression coding techniques, such as prefix (Huffman) codes. Also, it should not be confused with error control coding, whose object is to detect and correct errors in computer operations.
+
+\section{DEFLATE}
+
+DEFLATE is a lossless data compression file format that uses a combination of LZSS and Huffman coding. It was designed by Phil Katz, for version 2 of his PKZIP archiving tool. Deflate was later specified in RFC 1951 (1996). Katz also designed the original algorithm used to construct Deflate streams. This algorithm was patented as U.S. Patent 5,051,745, and assigned to PKWARE, Inc.[2][3] As stated in the RFC document, an algorithm producing Deflate files was widely thought to be implementable in a manner not covered by patents.[1] This led to its widespread use, for example in gzip compressed files and PNG image files, in addition to the ZIP file format for which Katz originally designed it.
 
 \vspace{0.3in}
 
