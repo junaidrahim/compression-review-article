@@ -1,9 +1,8 @@
 # A Review of Lossless Data Compression Algorithms
 
-Course Assignment assigned by Dr. Parashar.
+Course Assignment assigned by Dr. Parashar. A review article on Lossless Data Compression Algorithms. Writted in LaTeX using the arxiv template.
 
-A review article on Data Compression. PDF avaiblable [here](paper.pdf)
+PDF version avaiblable [here](paper.pdf)
 
-### Authors
 
-Junaid H Rahim and Aditya Meharia
+Authored by **Junaid H Rahim** and **Aditya Meharia**
