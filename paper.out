@@ -12,9 +12,12 @@
 \BOOKMARK [1][-]{section.8}{Tweet Classification By Data Compression 10.1145/2064448.2064473}{}% 12
 \BOOKMARK [2][-]{subsection.8.1}{Proposed Method}{section.8}% 13
 \BOOKMARK [2][-]{subsection.8.2}{Classification}{section.8}% 14
-\BOOKMARK [2][-]{subsection.8.3}{Results}{section.8}% 15
-\BOOKMARK [1][-]{section.9}{Energy Aware Lossless Data Compression 10.1145/1151690.1151692}{}% 16
-\BOOKMARK [2][-]{subsection.9.1}{Methodologies and Summary}{section.9}% 17
-\BOOKMARK [1][-]{section.10}{Lossless Compression of Already Compressed Textures strom2011lossless}{}% 18
-\BOOKMARK [1][-]{section.11}{Texture compression using low-frequency signal modulation 10.5555/844174.844187}{}% 19
-\BOOKMARK [1][-]{section.12}{Conclusion and Future Prospects}{}% 20
+\BOOKMARK [2][-]{subsection.8.3}{Related Work}{section.8}% 15
+\BOOKMARK [2][-]{subsection.8.4}{Results}{section.8}% 16
+\BOOKMARK [1][-]{section.9}{Energy Aware Lossless Data Compression 10.1145/1151690.1151692}{}% 17
+\BOOKMARK [2][-]{subsection.9.1}{Lossless Data Compression of low-bandwidth devices}{section.9}% 18
+\BOOKMARK [2][-]{subsection.9.2}{Methodologies and Summary}{section.9}% 19
+\BOOKMARK [1][-]{section.10}{Lossless Compression of Already Compressed Textures strom2011lossless}{}% 20
+\BOOKMARK [1][-]{section.11}{On the Compressive Power of Boolean Threshold Autoencoders melkman2020compressive}{}% 21
+\BOOKMARK [1][-]{section.12}{Texture compression using low-frequency signal modulation 10.5555/844174.844187}{}% 22
+\BOOKMARK [1][-]{section.13}{Conclusion and Future Prospects}{}% 23

@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper.aux
 The style file: unsrt.bst
 Database file #1: main.bib
@@ -8,45 +8,51 @@ Repeated entry---line 136 of file main.bib
  :                          ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in burrows1994block
-You've used 17 entries,
+Warning--empty author in deflate
+Warning--empty year in deflate
+Warning--empty author in hyperspace
+Warning--empty year in hyperspace
+Warning--empty journal in mogul1999trace
+Warning--there's a number but no series in santos1998increasing
+You've used 47 entries,
             1791 wiz_defined-function locations,
-            549 strings with 6410 characters,
-and the built_in function-call counts, 3786 in all, are:
-= -- 351
-> -- 142
-< -- 3
-+ -- 55
-- -- 38
-* -- 215
-:= -- 586
-add.period$ -- 53
-call.type$ -- 17
-change.case$ -- 14
+            714 strings with 11073 characters,
+and the built_in function-call counts, 11133 in all, are:
+= -- 1026
+> -- 403
+< -- 14
++ -- 155
+- -- 108
+* -- 654
+:= -- 1638
+add.period$ -- 142
+call.type$ -- 47
+change.case$ -- 43
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 200
-empty$ -- 376
-format.name$ -- 38
-if$ -- 868
+cite$ -- 54
+duplicate$ -- 572
+empty$ -- 1147
+format.name$ -- 108
+if$ -- 2580
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 18
-newline$ -- 88
-num.names$ -- 17
-pop$ -- 55
+int.to.str$ -- 47
+missing$ -- 47
+newline$ -- 234
+num.names$ -- 45
+pop$ -- 181
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 109
+skip$ -- 317
 stack$ -- 0
-substring$ -- 206
-swap$ -- 57
-text.length$ -- 3
+substring$ -- 716
+swap$ -- 179
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 33
-width$ -- 19
-write$ -- 188
+warning$ -- 7
+while$ -- 105
+width$ -- 49
+write$ -- 500
 (There was 1 error message)

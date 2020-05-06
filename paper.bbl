@@ -61,6 +61,25 @@ Christina Zeeh.
 \newblock In {\em URL: http://w3studi. informatik. uni-stuttgart. de/\~{}
   zeehca/Seminar/LempelZivReport. pdf [accessed November 3, 2003]}, 2003.
 
+\bibitem{witten1987arithmetic}
+Ian~H Witten, Radford~M Neal, and John~G Cleary.
+\newblock Arithmetic coding for data compression.
+\newblock {\em Communications of the ACM}, 30(6):520--540, 1987.
+
+\bibitem{rissanen1979arithmetic}
+Jorma Rissanen and Glen~G Langdon.
+\newblock Arithmetic coding.
+\newblock {\em IBM Journal of research and development}, 23(2):149--162, 1979.
+
+\bibitem{langdon1984introduction}
+Glen~G Langdon.
+\newblock An introduction to arithmetic coding.
+\newblock {\em IBM Journal of Research and Development}, 28(2):135--149, 1984.
+
+\bibitem{deflate}
+Deflate.
+\newblock {\em https://tools.ietf.org/html/rfc1951}.
+
 \bibitem{10.1145/2064448.2064473}
 Kyosuke Nishida, Ryohei Banno, Ko~Fujimura, and Takahide Hoshide.
 \newblock Tweet classification by data compression.
@@ -68,10 +87,142 @@ Kyosuke Nishida, Ryohei Banno, Ko~Fujimura, and Takahide Hoshide.
   and Exploiting Cultural DiversiTy on the Social Web}, DETECT ’11, page
   29–34, New York, NY, USA, 2011. Association for Computing Machinery.
 
+\bibitem{benedetto2002language}
+Dario Benedetto, Emanuele Caglioti, and Vittorio Loreto.
+\newblock Language trees and zipping.
+\newblock {\em Physical Review Letters}, 88(4):048702, 2002.
+
+\bibitem{li2004similarity}
+Ming Li, Xin Chen, Xin Li, Bin Ma, and Paul~MB Vit{\'a}nyi.
+\newblock The similarity metric.
+\newblock {\em IEEE transactions on Information Theory}, 50(12):3250--3264,
+  2004.
+
+\bibitem{cilibrasi2005clustering}
+Rudi Cilibrasi and Paul~MB Vit{\'a}nyi.
+\newblock Clustering by compression.
+\newblock {\em IEEE Transactions on Information theory}, 51(4):1523--1545,
+  2005.
+
+\bibitem{bratko2006spam}
+Andrej Bratko, Gordon~V Cormack, Bogdan Filipi{\v{c}}, Thomas~R Lynam, and
+  Bla{\v{z}} Zupan.
+\newblock Spam filtering using statistical data compression models.
+\newblock {\em Journal of machine learning research}, 7(Dec):2673--2698, 2006.
+
+\bibitem{marton2005compression}
+Yuval Marton, Ning Wu, and Lisa Hellerstein.
+\newblock On compression-based text classification.
+\newblock In {\em European Conference on Information Retrieval}, pages
+  300--314. Springer, 2005.
+
+\bibitem{irani2010study}
+Danesh Irani, Steve Webb, Calton Pu, and Kang Li.
+\newblock Study of trend-stuffing on twitter through text classification.
+\newblock In {\em Collaboration, Electronic messaging, Anti-Abuse and Spam
+  Conference (CEAS)}, 2010.
+
+\bibitem{sriram2010short}
+Bharath Sriram, Dave Fuhry, Engin Demir, Hakan Ferhatosmanoglu, and Murat
+  Demirbas.
+\newblock Short text classification in twitter to improve information
+  filtering.
+\newblock In {\em Proceedings of the 33rd international ACM SIGIR conference on
+  Research and development in information retrieval}, pages 841--842, 2010.
+
+\bibitem{sakaki2010earthquake}
+Takeshi Sakaki, Makoto Okazaki, and Yutaka Matsuo.
+\newblock Earthquake shakes twitter users: real-time event detection by social
+  sensors.
+\newblock In {\em Proceedings of the 19th international conference on World
+  wide web}, pages 851--860, 2010.
+
 \bibitem{10.1145/1151690.1151692}
 Kenneth~C. Barr and Krste Asanovi\'{c}.
 \newblock Energy-aware lossless data compression.
 \newblock {\em ACM Trans. Comput. Syst.}, 24(3):250–291, August 2006.
+
+\bibitem{note1998writing}
+Application Note.
+\newblock Writing efficient c for arm.
+\newblock {\em ARM Ltd, Note}, 34:12--13, 1998.
+
+\bibitem{lilley2000unified}
+Jeremy Lilley, Jason Yang, Hari Balakrishnan, and Srinivasan Seshan.
+\newblock A unified header compression framework for low-bandwidth links.
+\newblock In {\em Proceedings of the 6th annual international conference on
+  Mobile computing and networking}, pages 131--142, 2000.
+
+\bibitem{shacham2001rfc3173}
+A~Shacham, B~Monsour, R~Pereira, and M~Thomas.
+\newblock Rfc3173: Ip payload compression protocol (ipcomp), 2001.
+
+\bibitem{muthitacharoen2001low}
+Athicha Muthitacharoen, Benjie Chen, and David Mazieres.
+\newblock A low-bandwidth network file system.
+\newblock In {\em Proceedings of the eighteenth ACM symposium on Operating
+  systems principles}, pages 174--187, 2001.
+
+\bibitem{tridgell2000efficient}
+A~Tridgell.
+\newblock Efficient algorithms for sorting and synchronization—thesis, 2000.
+
+\bibitem{motgi2001network}
+Nitin Motgi and Amar Mukherjee.
+\newblock Network conscious text compression system (nctcsys).
+\newblock In {\em Proceedings International Conference on Information
+  Technology: Coding and Computing}, pages 440--446. IEEE, 2001.
+
+\bibitem{housel1996webexpress}
+Barron~C Housel and David~B Lindquist.
+\newblock Webexpress: A system for optimizing web browsing in a wireless
+  environment.
+\newblock In {\em Proceedings of the 2nd annual international conference on
+  Mobile computing and networking}, pages 108--116, 1996.
+
+\bibitem{krashinsky2003efficient}
+Ronny Krashinsky.
+\newblock Efficient web browsing for mobile clients using http compression.
+\newblock {\em See: http://www. cag. lcs. mit. edu/\~{} ronny/classes/httpcomp.
+  pdf}, 2003.
+
+\bibitem{hyperspace}
+Hyperspace communications, inc. mod gzip.
+\newblock {\em http://www.ehyperspace.com /htmlonly/products/mod gzip.html.}
+
+\bibitem{hunt1996empirical}
+James~J Hunt, Kiem-Phong Vo, and Walter~F Tichy.
+\newblock An empirical study of delta algorithms.
+\newblock In {\em International Workshop on Software Configuration Management},
+  pages 49--66. Springer, 1996.
+
+\bibitem{mogul1999trace}
+Jeffrey Mogul.
+\newblock A trace-based analysis of duplicate suppression in http.
+\newblock 1999.
+
+\bibitem{mogul1997potential}
+Jeffrey~C Mogul, Fred Douglis, Anja Feldmann, and Balachander Krishnamurthy.
+\newblock Potential benefits of delta encoding and data compression for http.
+\newblock In {\em Proceedings of the ACM SIGCOMM'97 conference on Applications,
+  technologies, architectures, and protocols for computer communication}, pages
+  181--194, 1997.
+
+\bibitem{santos1998increasing}
+Jonathan~R Santos and David Wetherall.
+\newblock Increasing effective link bandwidth by supressing replicated data.
+\newblock In {\em USENIX Annual Technical Conference}, number~98, 1998.
+
+\bibitem{compaq}
+J.~Hicks et~al.
+\newblock Compaq personal server project.
+\newblock {\em
+  http://crl.research.compaq.com/projects/personalserver/default.htm}, 1999.
+
+\bibitem{koskelin2002eprof}
+Kelly Koskelin, Kenneth Barr, and Krste Asanovic.
+\newblock Eprof: An energy profiler for the ipaq.
+\newblock In {\em 2nd Annual Student Oxygen Workshop}, 2002.
 
 \bibitem{strom2011lossless}
 Jacob Strom and Per Wennersten.
@@ -79,23 +230,36 @@ Jacob Strom and Per Wennersten.
 \newblock In {\em Proceedings of the ACM SIGGRAPH Symposium on High Performance
   Graphics}, pages 177--182, 2011.
 
+\bibitem{melkman2020compressive}
+Avraham~A Melkman, Sini Guo, Wai-Ki Ching, Pengyu Liu, and Tatsuya Akutsu.
+\newblock On the compressive power of boolean threshold autoencoders.
+\newblock {\em arXiv preprint arXiv:2004.09735}, 2020.
+
+\bibitem{ackley1985learning}
+David~H Ackley, Geoffrey~E Hinton, and Terrence~J Sejnowski.
+\newblock A learning algorithm for boltzmann machines.
+\newblock {\em Cognitive science}, 9(1):147--169, 1985.
+
+\bibitem{anderson1988neurocomputing}
+James~A Anderson, Edward Rosenfeld, and Andras Pellionisz.
+\newblock {\em Neurocomputing}, volume~2.
+\newblock MIT press, 1988.
+
+\bibitem{kingma2013auto}
+Diederik~P Kingma and Max Welling.
+\newblock Auto-encoding variational bayes.
+\newblock {\em arXiv preprint arXiv:1312.6114}, 2013.
+
+\bibitem{doersch2016tutorial}
+Carl Doersch.
+\newblock Tutorial on variational autoencoders.
+\newblock {\em arXiv preprint arXiv:1606.05908}, 2016.
+
 \bibitem{10.5555/844174.844187}
 Simon Fenney.
 \newblock Texture compression using low-frequency signal modulation.
 \newblock In {\em Proceedings of the ACM SIGGRAPH/EUROGRAPHICS Conference on
   Graphics Hardware}, HWWS ’03, page 84–91, Goslar, DEU, 2003. Eurographics
   Association.
-
-\bibitem{wang2020towards}
-Shurun Wang, Shiqi Wang, Wenhan Yang, Xinfeng Zhang, Shanshe Wang, Siwei Ma,
-  and Wen Gao.
-\newblock Towards analysis-friendly face representation with scalable feature
-  and texture compression.
-\newblock {\em arXiv preprint arXiv:2004.10043}, 2020.
-
-\bibitem{melkman2020compressive}
-Avraham~A Melkman, Sini Guo, Wai-Ki Ching, Pengyu Liu, and Tatsuya Akutsu.
-\newblock On the compressive power of boolean threshold autoencoders.
-\newblock {\em arXiv preprint arXiv:2004.09735}, 2020.
 
 \end{thebibliography}
