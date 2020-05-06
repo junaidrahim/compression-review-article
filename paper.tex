@@ -332,10 +332,11 @@ There are three modes of compression that the compressor has available:
 	
 	\item Compression, first with LZ77 then with Huffman coding. The trees used to compress during this mode are defined by the Deflate specification itself and no extra space must be taken to store those trees.
 	
-	\item Compression, first with LZ77 then with Huffman coding with trees that the compressor creates and stores along side the data .
-	The data is choppy in ``blocks,'' and every block uses a single mode of compression. If the compressor wants to change  from non-compressed storage to compression with the trees defined by the specification, or to compression with specified Huffman trees, or to compression with a different pair of Huffman trees, the present block must be ended and another one begun.
-	
+	\item Compression, first with LZ77 then with Huffman coding with trees that the compressor creates and stores along side the data.	
 \end{enumerate}
+
+The data is choppy in ``blocks,'' and every block uses a single mode of compression. If the compressor wants to change  from non-compressed storage to compression with the trees defined by the specification, or to compression with specified Huffman trees, or to compression with a different pair of Huffman trees, the present block must be ended and another one begun.
+
 
 \vspace{0.6in}
 
